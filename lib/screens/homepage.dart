@@ -40,7 +40,7 @@ class _HomepageState extends State<Homepage> {
               height: 280,
               child: Obx(() {
                 if (homeController.isLoading.value) {
-                  return Center(child: CircularProgressIndicator());
+                  return const Center(child: CircularProgressIndicator());
                 } else {
                   return ListView.builder(
                       scrollDirection: Axis.horizontal,
@@ -78,7 +78,7 @@ class _HomepageState extends State<Homepage> {
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 Text(
-                                  'Ngabrut',
+                                  result.title!,
                                   style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold),
